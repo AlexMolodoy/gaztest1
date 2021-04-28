@@ -36,3 +36,29 @@
     transform: rotate(360deg);
   }
 }
+
+.container{
+  display: flex;
+}
+
+.element{
+  width: 300px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border: 2px solid #282c34;
+}
+
+.header{
+  margin: 0;
+}
+
+.list{
+  padding: 30px;
+  margin: 0;
+}
+
+.text{
+  margin: 0;
+}

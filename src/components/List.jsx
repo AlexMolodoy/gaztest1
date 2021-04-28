@@ -1,0 +1,31 @@
+import React from 'react';
+import * as TYPES from 'prop-types';
+
+import '../App.css';
+
+Element.propTypes = {
+  list: TYPES.array,
+};
+
+Element.defaultProps = {
+  list: [],
+};
+
+function List({ list }) {
+
+  console.log(list)
+
+  return (
+    <ul className="list">
+      {list.map(element => {
+        return (<li
+          key={list.indexOf(element)}
+          >
+            {element}
+        </li>
+      )})}
+    </ul>
+  );
+}
+
+export default List;

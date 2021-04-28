@@ -1,24 +1,60 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Element from './components/Element';
+
+const data = [
+  {
+    header: "Заголовок 1",
+    options: [
+      "Элемент списка 1",
+      "Элемент списка 2",
+      "Элемент списка 3",
+      "Элемент списка 4",
+      "Элемент списка 5",
+    ],
+    text: "Какой-то текс 1, Какой-то текс 1, Какой-то текс 1, Какой-то текс 1, Какой-то текс 1, Какой-то текс 1, Какой-то текс 1, Какой-то текс 1",
+  },
+  {
+    header: "Заголовок 2",
+    options: [
+      "Элемент списка 1",
+      "Элемент списка 2",
+      "Элемент списка 3",
+    ],
+    text: "Какой-то текс 1, Какой-то текс 1, Какой-то текс 1,",
+  },
+  {
+    header: "Заголовок 3",
+    options: [
+      "Элемент списка 1",
+      "Элемент списка 2",
+      "Элемент списка 3",
+      "Элемент списка 4",
+    ],
+    text: "Какой-то текс 1, Какой-то текс 1, Какой-то текс 1, Какой-то текс 1,",
+  },
+]
+
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">
+        {
+          data.map(element => {
+            return (
+              <Element
+                key={data.indexOf(element)}
+                labelText={element.header}
+                list={element.options}
+                text={element.text}
+              />);
+          })
+        }
+        </div>
+    </>
   );
 }
 
