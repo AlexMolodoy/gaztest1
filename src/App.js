@@ -43,10 +43,10 @@ function App() {
     <>
       <div className="container">
         {
-          data.map(element => {
+          data.map((element, index) => {
             return (
               <Element
-                key={data.indexOf(element)}
+                key={index}
                 labelText={element.header}
                 list={element.options}
                 text={element.text}

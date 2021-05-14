@@ -17,9 +17,9 @@ function List({ list }) {
 
   return (
     <ul className="list">
-      {list.map(element => {
+      {list.map((element, index) => {
         return (<li
-          key={list.indexOf(element)}
+          key={index}
           >
             {element}
         </li>
